@@ -1,0 +1,24 @@
+{
+  "name": "sthima-sigep",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "diorgelesdias <diorgelesdias@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "tsnd --respawn --transpileOnly -r tsconfig-paths/register src/main.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "soap": "^0.31.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
+    "eslint": "^7.0.0",
+    "prettier": "^2.0.5",
+    "ts-node": "^8.10.1",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^3.9.2"
+  }
+}
