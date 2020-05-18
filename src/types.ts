@@ -28,6 +28,8 @@ export interface IError {
 
 //<!-- ID do serviço, será utilizado no método solicitaEtiquetas() -->
 
+//TODO: comentei os campos que não fazem parte do fluxo do sistema pra focar melhor.
+
 interface IContrato {
   cartoesPostagem: Array<any>;
   // codigoCliente: string;
@@ -68,4 +70,15 @@ export interface IUser {
   idCartaoPostagem: string;
   usuario: string;
   senha: string;
+}
+
+export interface ISolicitaEtiqueta {
+  tipoDestinatario: string;
+  identificador: number;
+  idServico: string;
+  qtdEtiquetas: number;
+}
+
+export interface IEtiqueta {
+  etiqueta: string;
 }
