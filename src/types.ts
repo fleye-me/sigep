@@ -10,7 +10,7 @@ export interface ICep {
   uf: string;
 }
 
-export interface ICepError {
+export interface IError {
   root: {
     Envelope: {
       Body: {

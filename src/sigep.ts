@@ -1,4 +1,4 @@
-import { correiosURL, ICep, ICepError, ICliente, IUser } from 'types';
+import { correiosURL, ICep, IError, ICliente, IUser } from 'types';
 import { createClientAsync } from 'soap';
 import { geraEtiquetaComDigitoVerificador } from 'utils';
 
@@ -16,7 +16,7 @@ export default class SigepClient {
     return new Promise((resolve, reject: any) => {
       response.consultaCEP(
         { cep },
-        (error: ICepError, result: { return: ICep }) => {
+        (error: IError, result: { return: ICep }) => {
           if (error) {
             const _error = error.root.Envelope.Body.Fault.faultstring;
             reject(_error) ? error.root : error;
@@ -33,7 +33,7 @@ export default class SigepClient {
     return new Promise((resolve, reject: any) => {
       response.buscaCliente(
         data,
-        (error: ICepError, result: { return: ICliente }) => {
+        (error: IError, result: { return: ICliente }) => {
           if (error) {
             const _error = error.root.Envelope.Body.Fault.faultstring;
             reject(_error) ? error.root : error;

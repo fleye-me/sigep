@@ -5,7 +5,7 @@
   "author": "diorgelesdias <diorgelesdias@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "tsnd --respawn --transpileOnly -r tsconfig-paths/register src/main.ts",
+    "start": "nodemon",
     "build": "tsc"
   },
   "dependencies": {
@@ -15,9 +15,9 @@
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
     "eslint": "^7.0.0",
+    "nodemon": "^2.0.4",
     "prettier": "^2.0.5",
     "ts-node": "^8.10.1",
-    "ts-node-dev": "^1.0.0-pre.44",
     "tsconfig-paths": "^3.9.0",
     "typescript": "^3.9.2"
   }
