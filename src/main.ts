@@ -1,31 +1,56 @@
-import SigepClient from 'sigep';
+import {
+  buscaCEP,
+  buscaCliente,
+  verificaDisponibilidadeServico,
+  solicitaEtiquetas,
+  buscaStatusCartaoPostagem,
+} from 'services/sigep';
+import { ISolicitaEtiqueta, IVerificaServico } from 'types';
 
 const main = async () => {
-  const sigep = new SigepClient('apphom');
   try {
-    const cep = await sigep.buscaCep('90460110');
-    console.log('main -> cep', cep);
+    const CEP = await buscaCEP('45602520');
+    console.log('main -> CEP', CEP);
 
-    const cliente = await sigep.buscaCliente({
+    const clienteObject = {
       idContrato: '9992157880',
       idCartaoPostagem: '0067599079',
       usuario: 'sigep',
       senha: 'n5f9t8',
-    });
-    console.log('main -> cliente', cliente.contratos[0].cartoesPostagem);
+    };
+    const CLIENTE = await buscaCliente(clienteObject);
+    console.log('main -> CLIENTE', CLIENTE);
 
-    const SolicitaEtiquetaData = {
-      tipoDestinatario: 'C',
-      identificador: 34028316000103,
+    const verificaObject: IVerificaServico = {
+      codAdministrativo: '17000190',
+      numeroServico: '04162',
+      cepOrigem: '05311900',
+      cepDestino: '05311900',
+      usuario: 'sigep',
+      senha: 'n5f9t8',
+    };
+    const verifica = await verificaDisponibilidadeServico(verificaObject);
+    console.log('main -> verifica', verifica);
+
+    const solicita: ISolicitaEtiqueta = {
       idServico: '124849',
+      identificador: 34028316000103,
       qtdEtiquetas: 1,
+      tipoDestinatario: 'C',
+      usuario: 'sigep',
+      senha: 'n5f9t8',
     };
 
-    const etiquetas = await sigep.solicitaEtiquetas(
-      { usuario: 'sigep', senha: 'n5f9t8' },
-      SolicitaEtiquetaData
-    );
-    console.log('main -> etiquetas', etiquetas);
+    const solicitacoes = await solicitaEtiquetas(solicita);
+    console.log('main -> solicitacoes', solicitacoes);
+
+    const buscaCardObject = {
+      numeroCartaoPostagem: '0067599079',
+      usuario: 'sigep',
+      senha: 'n5f9t8',
+    };
+    const buscaCard = await buscaStatusCartaoPostagem(buscaCardObject);
+    console.log('main -> buscaCard', buscaCard);
   } catch (error) {
     console.log('main -> error', error);
   }

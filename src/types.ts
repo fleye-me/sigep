@@ -24,45 +24,20 @@ export interface IError {
   };
 }
 
-//<!-- Código do serviço, será utilizado no XML da PLP -->
-
-//<!-- ID do serviço, será utilizado no método solicitaEtiquetas() -->
-
-//TODO: comentei os campos que não fazem parte do fluxo do sistema pra focar melhor.
+interface ICartaoPostagem {
+  codigoAdministrativo: string;
+  //TODO: Mapear resto dos campos
+}
 
 interface IContrato {
-  cartoesPostagem: Array<any>;
-  // codigoCliente: string;
-  // codigoDiretoria: string;
-  // contratoPK: {
-  //   diretoria: string;
-  //   numero: string;
-  // };
-  // dataAtualizacao: Date;
-  // dataAtualizacaoDDMMYYYY: string;
-  // dataVigenciaFim: Date;
-  // dataVigenciaFimDDMMYYYY: string;
-  // dataVigenciaInicio: Date;
-  // dataVigenciaInicioDDMMYYYY: string;
-  // datajAtualizacao: number;
-  // datajVigenciaFim: number;
-  // datajVigenciaInicio: number;
-  // descricaoDiretoriaRegional: string;
-  // horajAtualizacao: number;
-  // statusCodigo: string;
+  cartoesPostagem: Array<ICartaoPostagem>;
+  //TODO: Mapear resto dos campos
 }
 
 export interface ICliente {
   cnpj: string;
   contratos: Array<IContrato>;
-  // dataAtualizacao: Date;
-  // datajAtualizacao: number;
-  // descricaoStatusCliente: string;
-  // horajAtualizacao: string;
-  // id: string;
-  // inscricaoEstadual: string;
-  // nome: string;
-  // statusCodigo: string;
+  //TODO: Mapear resto dos campos
 }
 
 export interface IUser {
@@ -77,8 +52,21 @@ export interface ISolicitaEtiqueta {
   identificador: number;
   idServico: string;
   qtdEtiquetas: number;
+  usuario: string;
+  senha: string;
 }
 
-export interface IEtiqueta {
-  etiqueta: string;
+export interface IVerificaServico {
+  codAdministrativo: string;
+  numeroServico: string;
+  cepOrigem: string;
+  cepDestino: string;
+  usuario: string;
+  senha: string;
+}
+
+export interface IBuscaStatusCartaoPostagem {
+  numeroCartaoPostagem: string;
+  usuario: string;
+  senha: string;
 }
