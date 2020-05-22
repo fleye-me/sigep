@@ -1,8 +1,8 @@
 import { IError, ICep } from 'types';
-import api from 'services/api';
+import Api from 'services/api';
 
 export default async function buscaCEP(cep: string): Promise<ICep> {
-  const client = await api.clientSoap();
+  const client = await Api.clientSoap();
 
   return new Promise((resolve, reject: any) => {
     client.consultaCEP({ cep }, (error: IError, result: { return: ICep }) => {

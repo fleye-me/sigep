@@ -3,47 +3,53 @@ export interface IObjetoPostalItem {
   /**
    * @desc É obrigatório o campo ficar vazio.
    */
-  codigo_objeto_cliente: string;
+  codigo_objeto_cliente: string | string;
   codigo_servico_postagem: string;
+  /**
+   * @desc em centímetros cúbicos
+   */
   cubagem: number;
+  /**
+   * @desc Peso em gramas
+   */
   peso: number;
-  rt1?: string;
+  rt1: string;
   /**
    * @desc É obrigatório o campo ficar vazio.
    */
-  rt2: string;
+  rt2: string | string;
   destinatario: {
     nome_destinatario: string;
-    telefone_destinatario?: number;
-    celular_destinatario?: number;
-    email_destinatario?: string;
+    telefone_destinatario: string;
+    celular_destinatario: string;
+    email_destinatario: string;
     logradouro_destinatario: string;
-    complemento_destinatario?: string;
+    complemento_destinatario: string;
     numero_end_destinatario: number;
-    cpf_cnpj_destinatario?: number;
-    restricao_anac: string;
+    cpf_cnpj_destinatario?: string;
+    restricao_anac?: string;
   };
   nacional: {
     bairro_destinatario: string;
     cidade_destinatario: string;
     uf_destinatario: string;
     cep_destinatario: string;
-    codigo_usuario_postal?: string;
-    centro_custo_cliente?: string;
-    numero_nota_fiscal?: number;
-    serie_nota_fiscal?: string;
-    valor_nota_fiscal?: number;
+    codigo_usuario_postal: string;
+    centro_custo_cliente: string;
+    numero_nota_fiscal: string;
+    serie_nota_fiscal: string;
+    valor_nota_fiscal: string;
     /**
      * @desc É obrigatório o campo ficar vazio.
      */
-    natureza_nota_fiscal: string;
-    descricao_objeto?: string;
+    natureza_nota_fiscal: string | string;
+    descricao_objeto: string;
     valor_a_cobrar: string;
   };
   servico_adicional: {
     codigo_servico_adicional: Array<string>;
-    valor_declarado: number;
-    endereco_vizinho: string;
+    valor_declarado: string;
+    endereco_vizinho?: string;
   };
   dimensao_objeto: {
     /**
@@ -81,9 +87,9 @@ export interface IObjetoPostalItem {
   /**
    * @desc É obrigatório o campo ficar vazio.
    */
-  numero_comprovante_postagem: number;
+  numero_comprovante_postagem: number | string;
   /**
    * @desc É obrigatório o campo ficar vazio.
    */
-  valor_cobrado: number;
+  valor_cobrado: number | string;
 }

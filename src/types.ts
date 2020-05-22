@@ -70,3 +70,11 @@ export interface IBuscaStatusCartaoPostagem {
   usuario: string;
   senha: string;
 }
+
+export interface IFechaPlpVariosServicos {
+  idPlpCliente: number;
+  cartaoPostagem: string;
+  listaEtiquetas: Array<string>;
+  usuario: string;
+  senha: string;
+}
