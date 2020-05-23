@@ -78,3 +78,8 @@ export interface IFechaPlpVariosServicos {
   usuario: string;
   senha: string;
 }
+export interface ISolicitaXmlPlp {
+  idPlpMaster: number;
+  usuario: string;
+  senha: string;
+}

@@ -5,13 +5,16 @@ import {
   solicitaEtiquetas,
   buscaStatusCartaoPostagem,
   fechaPlpVariosServicos,
+  SolicitaXmlPlp,
 } from 'services/sigep';
 import {
   ISolicitaEtiqueta,
   IVerificaServico,
   IFechaPlpVariosServicos,
+  ISolicitaXmlPlp,
 } from 'types';
 import { forma_pagamento, IPLP } from 'services/PreListaDePostagem/plp';
+import { EtiquetasComDigito, EtiquetasSemEspaco } from 'utils';
 
 const main = async () => {
   try {
@@ -89,7 +92,7 @@ const main = async () => {
         forma_pagamento: forma_pagamento.Outros,
         objeto_postal: [
           {
-            numero_etiqueta: 'SZ806005334BR',
+            numero_etiqueta: 'SZ827028738BR',
             codigo_objeto_cliente: '',
             codigo_servico_postagem: '04162',
             cubagem: 0.0,
@@ -142,13 +145,40 @@ const main = async () => {
     const plp: IFechaPlpVariosServicos = {
       cartaoPostagem: '0067599079',
       idPlpCliente: 123456,
-      listaEtiquetas: ['SZ80600533BR'],
+      listaEtiquetas: ['SZ82702873BR'],
       usuario: 'sigep',
       senha: 'n5f9t8',
     };
 
+
     const fechaPlp = await fechaPlpVariosServicos(xml, plp);
     console.log('main -> fechaPlp', fechaPlp);
+
+    const xmlplp: ISolicitaXmlPlp = {
+      idPlpMaster: 50517263,
+      usuario: 'sigep',
+      senha: 'n5f9t8',
+    };
+
+    const solicitaXMLPLP = await SolicitaXmlPlp(xmlplp);
+    console.log('main -> solicitaXMLPLP', solicitaXMLPLP);
+
+    const responseEtiquetasComDigito = EtiquetasComDigito([
+      'SZ82702873 BR',
+      'SZ82702873 BR',
+      'SZ82702873 BR',
+      'SZ82702873 BR',
+      'SZ82702873 BR',
+    ]);
+    console.log("main -> responseEtiquetasComDigito", responseEtiquetasComDigito)
+    
+    const responseEtiquetasSemEspaco = EtiquetasSemEspaco([
+      'SZ82702873 BR',
+      'SZ82702873 BR',
+      'SZ82702873 BR',
+      'SZ82702873 BR',
+      'SZ82702873 BR',
+    ]);
   } catch (error) {
     console.log('main -> error', error);
   }
