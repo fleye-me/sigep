@@ -49,7 +49,6 @@ const main = async () => {
       usuario: 'sigep',
       senha: 'n5f9t8',
     };
-
     const solicitacoes = await solicitaEtiquetas(solicita);
     console.log('main -> solicitacoes', solicitacoes);
 
@@ -60,6 +59,30 @@ const main = async () => {
     };
     const buscaCard = await buscaStatusCartaoPostagem(buscaCardObject);
     console.log('main -> buscaCard', buscaCard);
+
+    const responseEtiquetasComDigito = EtiquetasComDigito([
+      'SZ82702873 BR',
+      'SZ82702873 BR',
+      'SZ82702873 BR',
+      'SZ82702873 BR',
+      'SZ82702873 BR',
+    ]);
+    console.log(
+      'main -> responseEtiquetasComDigito',
+      responseEtiquetasComDigito
+    );
+
+    const responseEtiquetasSemEspaco = EtiquetasSemEspaco([
+      'SZ82702873 BR',
+      'SZ82702873 BR',
+      'SZ82702873 BR',
+      'SZ82702873 BR',
+      'SZ82702873 BR',
+    ]);
+    console.log(
+      'main -> responseEtiquetasSemEspaco',
+      responseEtiquetasSemEspaco
+    );
 
     const xml: IPLP = {
       correioslog: {
@@ -149,8 +172,6 @@ const main = async () => {
       usuario: 'sigep',
       senha: 'n5f9t8',
     };
-
-
     const fechaPlp = await fechaPlpVariosServicos(xml, plp);
     console.log('main -> fechaPlp', fechaPlp);
 
@@ -159,26 +180,8 @@ const main = async () => {
       usuario: 'sigep',
       senha: 'n5f9t8',
     };
-
     const solicitaXMLPLP = await SolicitaXmlPlp(xmlplp);
     console.log('main -> solicitaXMLPLP', solicitaXMLPLP);
-
-    const responseEtiquetasComDigito = EtiquetasComDigito([
-      'SZ82702873 BR',
-      'SZ82702873 BR',
-      'SZ82702873 BR',
-      'SZ82702873 BR',
-      'SZ82702873 BR',
-    ]);
-    console.log("main -> responseEtiquetasComDigito", responseEtiquetasComDigito)
-    
-    const responseEtiquetasSemEspaco = EtiquetasSemEspaco([
-      'SZ82702873 BR',
-      'SZ82702873 BR',
-      'SZ82702873 BR',
-      'SZ82702873 BR',
-      'SZ82702873 BR',
-    ]);
   } catch (error) {
     console.log('main -> error', error);
   }

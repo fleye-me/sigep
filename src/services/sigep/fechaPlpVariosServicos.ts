@@ -11,7 +11,6 @@ export default async function fechaPlpVariosServicos(
 ) {
   const client = await Api.clientSoap();
   const objeto_postal_length = xml.correioslog.objeto_postal.length;
-  console.log('requestData', requestData);
 
   if (objeto_postal_length > 1000) {
     return 'Só é permitido enviar 1000 encomendas por PLP';
@@ -27,11 +26,8 @@ export default async function fechaPlpVariosServicos(
       spaces: 0,
     });
 
-
   const XMLValidator = parseXml(xml2string);
-  console.log('XMLValidator', XMLValidator);
   const XMLDocValid = parseXml(JS2XML);
-  console.log('XMLDocValid', XMLDocValid);
 
   return new Promise((resolve, reject: any) => {
     if (XMLDocValid.validate(XMLValidator)) {
@@ -47,13 +43,7 @@ export default async function fechaPlpVariosServicos(
         }
       );
     } else {
-      console.log(
-        '============================XMLDocValidError============================'
-      );
-      console.log(XMLDocValid.validationErrors);
-      console.log(
-        '============================XMLDocValidError============================'
-      );
+      reject(XMLDocValid.validationErrors);
     }
   });
 }
