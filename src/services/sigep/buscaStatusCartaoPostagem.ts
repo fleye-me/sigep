@@ -1,10 +1,10 @@
 import { IBuscaStatusCartaoPostagem, IError } from 'types';
-import api from 'services/api';
+import Api from 'services/api';
 
 export default async function buscaStatusCartaoPostagem(
   requestData: IBuscaStatusCartaoPostagem
 ): Promise<string> {
-  const client = await api.clientSoap();
+  const client = await Api.clientSoap();
 
   return new Promise((resolve, reject: any) => {
     client.getStatusCartaoPostagem(

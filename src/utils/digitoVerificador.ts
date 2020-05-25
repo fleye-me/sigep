@@ -1,4 +1,4 @@
-export const geraEtiquetaComDigitoVerificador = (numeroEtiqueta: string) => {
+export const digitoVerificador = (numeroEtiqueta: string) => {
   let prefixo = numeroEtiqueta.substring(0, 2);
   let numero = numeroEtiqueta.substring(2, 10);
   let sufixo = numeroEtiqueta.substring(10).trim();
@@ -9,7 +9,7 @@ export const geraEtiquetaComDigitoVerificador = (numeroEtiqueta: string) => {
 
   // Preenche número com 0 à esquerda
   if (numeroEtiqueta.length < 12) {
-    retorno = 'Error...';
+    retorno = 'Erro, etiqueta inválida';
   } else if (numero.length < 8 && numeroEtiqueta.length == 12) {
     let zeros = '';
     let diferenca = 8 - numero.length;
