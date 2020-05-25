@@ -1,5 +1,10 @@
 const Sedex = {
-  '41556': { type: 'sedex', name: 'Sedex', numeroServico: '41556', id: '121877' },
+  '41556': {
+    type: 'sedex',
+    name: 'Sedex',
+    numeroServico: '41556',
+    id: '121877',
+  },
   '04146': {
     type: 'sedex',
     name: 'SEDEX Contrato Grandes Formatos (Liminar ABCOMM)',

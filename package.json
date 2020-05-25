@@ -1,6 +1,6 @@
 {
-  "name": "dias-sigep",
-  "version": "1.1.1",
+  "name": "@sthima/sigep",
+  "version": "0.0.0",
   "description": "Lib de integração com o Sigep - Gerenciador de Postagens dos Correios",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -10,10 +10,18 @@
   "files": [
     "dist/**/*"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sthima/sigep.git"
+  },
   "scripts": {
     "start": "nodemon",
     "build": "tsc",
-    "prepublish": "tsc"
+    "prepublish": "yarn lint",
+    "lint": "eslint src/*",
+    "preversion": "yarn lint",
+    "version": "yarn format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "dependencies": {
     "libxmljs": "^0.19.7",
@@ -25,6 +33,8 @@
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
     "eslint": "^7.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
     "nodemon": "^2.0.4",
     "prettier": "^2.0.5",
     "ts-node": "^8.10.1",
@@ -32,7 +42,7 @@
     "typescript": "^3.9.2"
   },
   "keywords": [
-
+    "sthima",
     "sigep",
     "correios"
   ]
