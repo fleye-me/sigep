@@ -1,6 +1,3 @@
-export const correiosURL = (type: string) =>
-  `https://${type}.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente?wsdl`;
-
 export interface ICep {
   bairro: string;
   cep: string;

@@ -1,12 +1,19 @@
 {
-  "name": "sthima-sigep",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "dias-sigep",
+  "version": "1.1.1",
+  "description": "Lib de integração com o Sigep - Gerenciador de Postagens dos Correios",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "author": "diorgelesdias <diorgelesdias@gmail.com>",
   "license": "MIT",
+  "private": false,
+  "files": [
+    "dist/**/*"
+  ],
   "scripts": {
     "start": "nodemon",
-    "build": "tsc"
+    "build": "tsc",
+    "prepublish": "tsc"
   },
   "dependencies": {
     "libxmljs": "^0.19.7",
@@ -23,5 +30,10 @@
     "ts-node": "^8.10.1",
     "tsconfig-paths": "^3.9.0",
     "typescript": "^3.9.2"
-  }
+  },
+  "keywords": [
+
+    "sigep",
+    "correios"
+  ]
 }

@@ -1,5 +1,5 @@
-import { IVerificaServico, IError } from 'types';
-import Api from 'services/api';
+import { IVerificaServico, IError } from './types';
+import Api from './api';
 
 export default async function verificaDisponibilidadeServico(
   requestData: IVerificaServico

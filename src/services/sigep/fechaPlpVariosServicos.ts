@@ -1,9 +1,9 @@
-import Api from 'services/api';
-import { IError, IFechaPlpVariosServicos } from 'types';
+import Api from './api';
+import { IError, IFechaPlpVariosServicos } from './types';
 import { js2xml } from 'xml-js';
-import { IPLP } from 'services/PreListaDePostagem/plp';
+import { IPLP } from '../PreListaDePostagem/plp';
 import { parseXml } from 'libxmljs';
-import { xml2string } from 'utils/xmlValidator';
+import { xml2string } from '../../utils/xmlValidator';
 
 export default async function fechaPlpVariosServicos(
   xml: IPLP,

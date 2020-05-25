@@ -1,5 +1,5 @@
-import { IError, IUser, ICliente } from 'types';
-import Api from 'services/api';
+import { IError, IUser, ICliente } from './types';
+import Api from './api';
 
 export default async function buscaCliente(userData: IUser): Promise<ICliente> {
   const client = await Api.clientSoap();

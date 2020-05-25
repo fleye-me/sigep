@@ -1,5 +1,5 @@
-import { ISolicitaEtiqueta, IError } from 'types';
-import Api from 'services/api';
+import { ISolicitaEtiqueta, IError } from './types';
+import Api from './api';
 
 export default async function solicitaEtiquetas(
   requestData: ISolicitaEtiqueta

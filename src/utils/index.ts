@@ -4,7 +4,7 @@ import { digitoVerificador } from './digitoVerificador';
  * @desc Na montagem do PLP no campo <numero_etiqueta> é necessário o envio das
  * etiquetas com o Digito
  */
-export function EtiquetasComDigito(etiquetas: Array<string>) {
+export function etiquetasComDigito(etiquetas: Array<string>) {
   return etiquetas.map((etiqueta) => digitoVerificador(etiqueta));
 }
 
@@ -12,6 +12,6 @@ export function EtiquetasComDigito(etiquetas: Array<string>) {
  * @desc Na montagem do PLP no campo <listaEtiquetas> é necessário o envio das
  * etiquetas sem DIGITO e sem ESPAÇO
  */
-export function EtiquetasSemEspaco(etiquetas: Array<string>) {
+export function etiquetasSemEspaco(etiquetas: Array<string>) {
   return etiquetas.map((etiqueta) => etiqueta.replace(' ', ''));
 }

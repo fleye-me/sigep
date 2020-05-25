@@ -1,5 +1,5 @@
-import { IError, ICep } from 'types';
-import Api from 'services/api';
+import { IError, ICep } from './types';
+import Api from './api';
 
 export default async function buscaCEP(cep: string): Promise<ICep> {
   const client = await Api.clientSoap();
