@@ -1,7 +1,7 @@
-import { IError, ISolicitaXmlPlp } from 'types';
-import Api from 'services/api';
+import { IError, ISolicitaXmlPlp } from './types';
+import Api from './api';
 
-export default async function SolicitaXmlPlp(
+export default async function solicitaXmlPlp(
   requestData: ISolicitaXmlPlp
 ): Promise<string> {
   const client = await Api.clientSoap();

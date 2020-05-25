@@ -4,14 +4,14 @@ import verificaDisponibilidadeServico from './verificaDisponibilidadeServico';
 import solicitaEtiquetas from './solicitaEtiquetas';
 import buscaStatusCartaoPostagem from './buscaStatusCartaoPostagem';
 import fechaPlpVariosServicos from './fechaPlpVariosServicos';
-import SolicitaXmlPlp from './solicitaXmlPlp';
+import solicitaXmlPlp from './solicitaXmlPlp';
 
-export {
+export default {
   buscaCliente,
   buscaCEP,
   verificaDisponibilidadeServico,
   solicitaEtiquetas,
   buscaStatusCartaoPostagem,
   fechaPlpVariosServicos,
-  SolicitaXmlPlp,
+  solicitaXmlPlp,
 };

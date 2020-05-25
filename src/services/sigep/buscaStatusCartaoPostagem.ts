@@ -1,5 +1,5 @@
-import { IBuscaStatusCartaoPostagem, IError } from 'types';
-import Api from 'services/api';
+import { IBuscaStatusCartaoPostagem, IError } from './types';
+import Api from './api';
 
 export default async function buscaStatusCartaoPostagem(
   requestData: IBuscaStatusCartaoPostagem

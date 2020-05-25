@@ -1,4 +1,5 @@
 import { IObjetoPostalItem } from './objetoPostalItem';
+import { Forma_pagamento } from './types';
 
 export interface IPLP {
   correioslog: {
@@ -35,15 +36,7 @@ export interface IPLP {
       cpf_cnpj_remetente?: string;
       ciencia_conteudo_proibido?: string;
     };
-    forma_pagamento: forma_pagamento;
+    forma_pagamento: Forma_pagamento;
     objeto_postal: Array<IObjetoPostalItem>;
   };
-}
-
-export enum forma_pagamento {
-  'Vale Postal' = 1,
-  'Reembolso Postal',
-  'Contrato de Câmbio',
-  'Cartão de Crédito',
-  'Outros',
 }
