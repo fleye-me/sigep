@@ -27,7 +27,7 @@ npm i @sthima/sigep
 ## Funcionamento
 
 - As funções podem ser chamadas com async/await caso queiram.
-- Os Correios dispoe de duas URL sendo elas, homologação e produção, para usar a lib em modo homologação basta colocar uma env `APPHOM` no projeto.
+- O Correios dispoe de duas URL sendo elas, homologação e produção, para usar a lib em modo homologação basta colocar uma env `APPHOM` no projeto.
 
 Exemplo de um arquivo package.json
 
