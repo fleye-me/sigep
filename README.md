@@ -3,17 +3,20 @@
 Biblioteca criada com o intuito de facilitar a integração com o SIGEP
 
 ### Instalação (npm ou yarn)
+
 ```
 yarn add @sthima/sigep
 ```
+
 ```
 npm i @sthima/sigep
 ```
 
 ## Funções disponíveis
+
 - Busca CEP
 - Busca Cliente
-- Verifica disponibilida de servico de entrega
+- Verifica disponibilidade de servico de entrega
 - Solicita etiquetas
 - Busca status de cartão postagem
 - Fecha PLP com varios serviços
@@ -22,8 +25,28 @@ npm i @sthima/sigep
 - Etiquetas sem Espaço
 
 ## Funcionamento
-As funções podem ser chamadas com async/await caso queiram
+
+- As funções podem ser chamadas com async/await caso queiram.
+- Os Correios dispoe de duas URL sendo elas, homologação e produção, para usar a lib em modo homologação basta colocar uma env `APPHOM` no projeto.
+
+Exemplo de um arquivo package.json
+
+```
+"scripts": {
+    "start": "env APPHOM=true ..."
+}
+```
+
+Exemplo de um arquivo .env
+
+```
+...
+APPHOM=true
+...
+```
+
 #### Busca CEP
+
 ```
 import { Sigep } from "@sthima/sigep";
 
@@ -31,6 +54,7 @@ Sigep.buscaCEP('45602520').then(cep => console.log(cep));
 ```
 
 #### Busca Cliente
+
 ```
 import { Sigep } from "@sthima/sigep";
 
@@ -45,7 +69,8 @@ const clienteObject = {
 Sigep.buscaCliente(clienteObject).then((cliente) => console.log(cliente));
 ```
 
-#### Verifica disponibilida de servico de entrega
+#### Verifica disponibilidade de servico de entrega
+
 ```
 // Para facilitar a criação do objeto tem disponivel a interface dele
 import { Sigep, IVerificaServico } from "@sthima/sigep";
@@ -66,6 +91,7 @@ Sigep.verificaDisponibilidadeServico(verificaObject).then((verifica) =>
 ```
 
 #### Solicitar etiquetas
+
 ```
 // Para facilitar a criação do objeto tem disponivel a interface dele
 import { Sigep, ISolicitaEtiqueta } from "@sthima/sigep";
@@ -84,6 +110,7 @@ Sigep.solicitaEtiquetas(solicita).then(solicitacao => console.log(solicitacao));
 ```
 
 #### Busca status de cartão postagem
+
 ```
 import { Sigep } from "@sthima/sigep";
 
@@ -100,6 +127,7 @@ Sigep.buscaStatusCartaoPostagem(buscaCardObject).then((buscaCard) =>
 ```
 
 #### Fecha PLP com varios serviços
+
 ```
 // Para facilitar a criação do objeto tem disponivel a interface dele
 import { Sigep, IPLP } from "@sthima/sigep";
@@ -123,6 +151,7 @@ Sigep.fechaPlpVariosServicos(xml, plp).then((fechaPlp) =>
 ```
 
 #### Solicita Xml PLP
+
 ```
 // Para facilitar a criação do objeto tem disponivel a interface dele
 import { Sigep, ISolicitaXmlPlp } from "@sthima/sigep";
@@ -140,6 +169,7 @@ Sigep.solicitaXmlPlp(xmlplp).then((solicitaXMLPLP) =>
 ```
 
 #### Etiquetas com Digito verificador (função auxiliar)
+
 ```
 import { etiquetasComDigito } from "@sthima/sigep";
 
@@ -155,6 +185,7 @@ console.log(responseEtiquetasComDigito);
 ```
 
 #### Etiquetas sem Espaço (função auxiliar)
+
 ```
 import { etiquetasSemEspaco } from "@sthima/sigep";
 
@@ -168,4 +199,3 @@ const responseEtiquetasComDigito = etiquetasSemEspaco([
 ]);
 console.log(responseEtiquetasComDigito);
 ```
-
