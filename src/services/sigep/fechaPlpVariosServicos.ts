@@ -1,7 +1,7 @@
 import Api from './api';
 import { IError, IFechaPlpVariosServicos } from './types';
 import { js2xml } from 'xml-js';
-import { IPLP } from '../PreListaDePostagem/plp';
+import { IPLP } from '../preListaDePostagem/plp';
 import { parseXml } from 'libxmljs';
 import { xml2string } from '../../utils/xmlValidator';
 
@@ -27,10 +27,10 @@ export default async function fechaPlpVariosServicos(
     });
 
   const XMLValidator = parseXml(xml2string);
-  const XMLDocValid = parseXml(JS2XML);
+  const XMLDocValidator = parseXml(JS2XML);
 
   return new Promise((resolve, reject: any) => {
-    if (XMLDocValid.validate(XMLValidator)) {
+    if (XMLDocValidator.validate(XMLValidator)) {
       client.fechaPlpVariosServicos(
         { xml: JS2XML, ...requestData },
         (error: IError, result: { return: string }) => {
@@ -43,7 +43,7 @@ export default async function fechaPlpVariosServicos(
         }
       );
     } else {
-      reject(XMLDocValid.validationErrors);
+      reject(XMLDocValidator.validationErrors);
     }
   });
 }
