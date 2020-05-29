@@ -131,7 +131,6 @@ Sigep.buscaStatusCartaoPostagem(buscaCardObject).then((buscaCard) =>
 ### Fecha PLP com varios serviços
 
 ```javascript
-
 // Para facilitar a criação do objeto tem disponivel a interface dele
 import { Sigep, IPLP, IFechaPlpVariosServicos } from '@sthima/sigep';
 
@@ -179,7 +178,10 @@ Sigep.solicitaXmlPlp(xmlplp).then((solicitaXMLPLP) =>
 ```javascript
 import { etiquetasComDigito } from '@sthima/sigep';
 
-// Na montagem do PLP no campo <numero_etiqueta> é necessário colocar o numero das etiquetas com o Dígito
+/**
+ * Na montagem do PLP no campo <numero_etiqueta> é necessário colocar o numero
+ * das etiquetas com o Dígito
+ */
 const responseEtiquetasComDigito = etiquetasComDigito([
   'SZ82702873 BR',
   'SZ82702873 BR',
@@ -195,7 +197,10 @@ console.log(responseEtiquetasComDigito);
 ```javascript
 import { etiquetasSemEspaco } from '@sthima/sigep';
 
-// Na montagem do PLP no campo <listaEtiquetas> é necessário colocar o número das etiquetas sem DIGITO e sem ESPAÇO
+/**
+ * Na montagem do PLP no campo <listaEtiquetas> é necessário colocar o número
+ * das etiquetas sem DIGITO e sem ESPAÇO
+ */
 const responseEtiquetasComDigito = etiquetasSemEspaco([
   'SZ82702873 BR',
   'SZ82702873 BR',
