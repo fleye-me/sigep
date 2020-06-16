@@ -1,4 +1,5 @@
 const Carta = {
+  /** CARTA A FATURAR CHANCELA */
   C10065: {
     tipo: 'CARTA',
     name: 'CARTA A FATURAR CHANCELA',
@@ -6,6 +7,7 @@ const Carta = {
     id: '109480',
   },
 
+  /** CARTA AGF OP */
   C10073: {
     tipo: 'CARTA',
     name: 'CARTA AGF OP',
@@ -13,6 +15,7 @@ const Carta = {
     id: '109483',
   },
 
+  /** CARTA COMERCIAL ACIMA 500 GRAM */
   C10081: {
     tipo: 'CARTA',
     name: 'CARTA COMERCIAL ACIMA 500 GRAM',
@@ -20,6 +23,7 @@ const Carta = {
     id: '109497',
   },
 
+  /** CARTA COM A FATURAR CONT PPS */
   C10090: {
     tipo: 'CARTA',
     name: 'CARTA COM A FATURAR CONT PPS',
@@ -27,6 +31,7 @@ const Carta = {
     id: '109632',
   },
 
+  /** REGISTRADO ADMINISTRATIVO */
   C10987: {
     tipo: 'CARTA',
     name: 'REGISTRADO ADMINISTRATIVO',
@@ -34,6 +39,7 @@ const Carta = {
     id: '113498',
   },
 
+  /** CARTA COM ELEICOES CHANCELA */
   C10111: {
     tipo: 'CARTA',
     name: 'CARTA COM ELEICOES CHANCELA',
@@ -41,6 +47,7 @@ const Carta = {
     id: '115591',
   },
 
+  /** CARTA COMERCIAL/ACAO JUDICIAL */
   C10200: {
     tipo: 'CARTA',
     name: 'CARTA COMERCIAL/ACAO JUDICIAL',
@@ -48,6 +55,7 @@ const Carta = {
     id: '116056',
   },
 
+  /** CARTA REG FAT ETIQ */
   C10138: {
     tipo: 'CARTA',
     name: 'CARTA REG FAT ETIQ',
@@ -55,6 +63,7 @@ const Carta = {
     id: '116985',
   },
 
+  /** CARTA COMERCIAL  REGISTRADA */
   C10154: {
     tipo: 'CARTA',
     name: 'CARTA COMERCIAL  REGISTRADA',
@@ -62,6 +71,7 @@ const Carta = {
     id: '118424',
   },
 
+  /** CARTA COMERCIAL  REG MODICO */
   C10162: {
     tipo: 'CARTA',
     name: 'CARTA COMERCIAL  REG MODICO',
@@ -69,6 +79,7 @@ const Carta = {
     id: '118430',
   },
 
+  /** CARTA COM REG CTR OP MAQ FRA */
   C11851: {
     tipo: 'CARTA',
     name: 'CARTA COM REG CTR OP MAQ FRA',
@@ -76,6 +87,7 @@ const Carta = {
     id: '123912',
   },
 
+  /** CARTA COM SIMP CTR OP MAQ FRA */
   C11843: {
     tipo: 'CARTA',
     name: 'CARTA COM SIMP CTR OP MAQ FRA',
@@ -83,6 +95,7 @@ const Carta = {
     id: '123913',
   },
 
+  /** CARTA A FATURAR SELO E SE */
   C12556: {
     tipo: 'CARTA',
     name: 'CARTA A FATURAR SELO E SE',
