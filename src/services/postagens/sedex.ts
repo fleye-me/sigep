@@ -1,93 +1,142 @@
 const Sedex = {
-  '41556': {
-    type: 'sedex',
-    name: 'Sedex',
-    numeroServico: '41556',
-    id: '121877',
+  /** SEDEX 10 A FATURAR */
+  S40215: {
+    tipo: 'SEDEX',
+    name: 'SEDEX 10 A FATURAR',
+    numeroServico: '40215',
+    id: '104707',
   },
-  '04146': {
-    type: 'sedex',
-    name: 'SEDEX Contrato Grandes Formatos (Liminar ABCOMM)',
-    numeroServico: '04146',
-    id: '',
+  /** SEDEX 10 CONTRATO AG */
+  S03158: {
+    tipo: 'SEDEX',
+    name: 'SEDEX 10 CONTRATO AG',
+    numeroServico: '03158',
+    id: '162016',
   },
-  '04154': {
-    type: 'sedex',
-    name: 'SEDEX Contrato Agência (Liminar ABCOMM)',
-    numeroServico: '04154',
-    id: '160126',
+  /** SEDEX HOJE A FATURAR */
+  S40290: {
+    tipo: 'SEDEX',
+    name: 'SEDEX HOJE A FATURAR',
+    numeroServico: '40290',
+    id: '108934',
   },
-  '04243': {
-    type: 'sedex',
-    name: 'SEDEX Reverso (Liminar ABCOMM)',
-    numeroServico: '04243',
-    id: '',
+  /** SEDEX HOJE CONTRATO AG */
+  S03204: {
+    tipo: 'SEDEX',
+    name: 'SEDEX HOJE CONTRATO AG',
+    numeroServico: '03204',
+    id: '162020',
   },
-  '04278': {
-    type: 'sedex',
-    name: 'SEDEX Contrato UO (Liminar ABCOMM)',
-    numeroServico: '04278',
-    id: '',
+  /** SEDEX 12 A FATURAR */
+  S40169: {
+    tipo: 'SEDEX',
+    name: 'SEDEX 12 A FATURAR',
+    numeroServico: '40169',
+    id: '115218',
   },
-  '04151': {
-    type: 'sedex',
-    name: 'SEDEX Contrato Agencia Pagamento na Entrega (Liminar ABCOMM)',
-    numeroServico: '04151',
-    id: '',
+  /** SEDEX 12 CONTRATO AG */
+  S03140: {
+    tipo: 'SEDEX',
+    name: 'SEDEX 12 CONTRATO AG',
+    numeroServico: '03140',
+    id: '162015',
   },
-  '04553': {
-    type: 'sedex',
-    name: 'SEDEX Contrato Agencia TA ',
-    numeroServico: '04553',
-    id: '161274',
+  /** SEDEX ADMINISTRATIVO */
+  S40550: {
+    tipo: 'SEDEX',
+    name: 'SEDEX ADMINISTRATIVO',
+    numeroServico: '40550',
+    id: '113379',
   },
-  '04162': {
-    type: 'sedex',
-    name: 'SEDEX Contrato Agência',
+  /** REMESSA EXP TALAO DE CHEQUES- */ S40622: {
+    tipo: 'SEDEX',
+    name: 'REMESSA EXP TALAO DE CHEQUES-',
+    numeroServico: '40622',
+    id: '114013',
+  },
+  /** SEDEX CONTRATO AGENCIA */
+  S04162: {
+    tipo: 'SEDEX',
+    name: 'SEDEX CONTRATO AGENCIA',
     numeroServico: '04162',
     id: '124849',
   },
-  '04170': {
-    type: 'sedex',
-    name: 'SEDEX Reverso Contrato Agência',
-    numeroServico: '04170',
-    id: '124849',
-  },
-  '04014': {
-    type: 'sedex',
-    name: 'Sedex a vista',
+  /** SEDEX A VISTA */
+  S04014: {
+    tipo: 'SEDEX',
+    name: 'SEDEX A VISTA',
     numeroServico: '04014',
-    id: '104295',
+    id: '124877',
   },
-  '40045': {
-    type: 'sedex',
-    name: 'Sedex Varejo a Cobrar',
-    numeroServico: '40045',
-    id: '',
-  },
-  '41009': {
-    type: 'sedex',
-    name: 'Sedex Agrupado',
-    numeroServico: '41009',
-    id: '119461',
-  },
-  '40380': {
-    type: 'sedex',
-    name: 'Sedex Reverso',
-    numeroServico: '40380',
-    id: '109806',
-  },
-  '04685': {
-    type: 'sedex',
-    name: 'Sedex Pagamento na Entrega',
-    numeroServico: '04685',
-    id: '114976',
-  },
-  '04316': {
-    type: 'sedex',
-    name: 'Sedex Contrato - UO',
+  /** SEDEX CONTRATO - UO */
+  S04316: {
+    tipo: 'SEDEX',
+    name: 'SEDEX CONTRATO - UO',
     numeroServico: '04316',
     id: '124900',
+  },
+  /** SEDEX ON LINE A VISTA */
+  S04022: {
+    tipo: 'SEDEX',
+    name: 'SEDEX ON LINE A VISTA',
+    numeroServico: '04022',
+    id: '125554',
+  },
+  /** SPP A VISTA E A FATURAR */
+  S04073: {
+    tipo: 'SEDEX',
+    name: 'SPP A VISTA E A FATURAR',
+    numeroServico: '04073',
+    id: '125959',
+  },
+  /** SEDEX CONTRATO GRAND FORMATOS */
+  S04138: {
+    tipo: 'SEDEX',
+    name: 'SEDEX CONTRATO GRAND FORMATOS',
+    numeroServico: '04138',
+    id: '159907',
+  },
+  /** SEDEX CONTRATO AGENCIA TA */
+  S04553: {
+    tipo: 'SEDEX',
+    name: 'SEDEX CONTRATO AGENCIA TA',
+    numeroServico: '04553',
+    id: '161274',
+  },
+  /** CDL EXPRESSO */
+  S76686: {
+    tipo: 'SEDEX',
+    name: 'CDL EXPRESSO',
+    numeroServico: '76686',
+    id: '162002',
+  },
+  /** SEDEX CONTRATO AG TA */
+  S03050: {
+    tipo: 'SEDEX',
+    name: 'SEDEX CONTRATO AG TA',
+    numeroServico: '03050',
+    id: '162008',
+  },
+  /** SEDEX CONTRATO GDES FORMATOS */
+  S03212: {
+    tipo: 'SEDEX',
+    name: 'SEDEX CONTRATO GDES FORMATOS',
+    numeroServico: '03212',
+    id: '162021',
+  },
+  /** SEDEX CONTRATO AG */
+  S03220: {
+    tipo: 'SEDEX',
+    name: 'SEDEX CONTRATO AG',
+    numeroServico: '03220',
+    id: '162022',
+  },
+  /** SEDEX CONTRATO INDUSTRIAL */
+  S03280: {
+    tipo: 'SEDEX',
+    name: 'SEDEX CONTRATO INDUSTRIAL',
+    numeroServico: '03280',
+    id: '162025',
   },
 };
 

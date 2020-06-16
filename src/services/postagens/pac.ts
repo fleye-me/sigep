@@ -1,65 +1,108 @@
 const Pac = {
-  '41068': { name: 'Pac', numeroServico: '41068', id: '109819' },
-  '04510': { name: 'Pac', numeroServico: '04510', id: '124887' },
-  '41300': {
-    name: 'Pac Grandes Formatos',
-    numeroServico: '41300',
-    id: '120366',
+  /** PAC ADMINISTRATIVO */
+  P41203: {
+    tipo: 'PAC',
+    name: 'PAC ADMINISTRATIVO',
+    numeroServico: '41203',
+    id: '113368',
   },
-  '04693': {
-    name: 'Pac Contrato Grandes Formatos',
-    numeroServico: '04693',
-    id: '125248',
-  },
-  '04308': {
-    name: 'PAC Contrato Agencia Pagamento na Entrega (Liminar ABCOMM)',
-    numeroServico: '04308',
-    id: '',
-  },
-  '04596': {
-    name: 'PAC Contrato Agencia TA',
-    numeroServico: '04596',
-    id: '161277',
-  },
-  '04812': {
-    name: 'Pac Contrato - UO',
-    numeroServico: '04812',
-    id: '124899',
-  },
-  '04669': {
-    name: 'PAC Contrato Agência',
+  /** PAC CONTRATO AGENCIA */
+  P04669: {
+    tipo: 'PAC',
+    name: 'PAC CONTRATO AGENCIA',
     numeroServico: '04669',
     id: '124884',
   },
-  '04677': {
-    name: 'PAC Reverso Contrato Agência',
-    numeroServico: '04677',
-    id: '124884',
+  /** PAC A VISTA */
+  P04510: {
+    tipo: 'PAC',
+    name: 'PAC A VISTA',
+    numeroServico: '04510',
+    id: '124887',
   },
-  '04883': {
-    name: 'PAC Contrato Grandes Formatos (Liminar ABCOMM)',
-    numeroServico: '04883',
-    id: '',
+  /** PAC CONTRATO - UO */
+  P04812: {
+    tipo: 'PAC',
+    name: 'PAC CONTRATO - UO',
+    numeroServico: '04812',
+    id: '124899',
   },
-  '04367': {
-    name: 'PAC Contrato Agência (Liminar ABCOMM)',
-    numeroServico: '04367',
-    id: '160123',
+  /** PAC ON LINE A VISTA */
+  P04030: {
+    tipo: 'PAC',
+    name: 'PAC ON LINE A VISTA',
+    numeroServico: '04030',
+    id: '125555',
   },
-  '04375': {
-    name: 'PAC Reverso (Liminar ABCOMM)',
-    numeroServico: '04375',
-    id: '',
+  /** CORREIOS MINI ENVIOS CTR AG */
+  P04227: {
+    tipo: 'PAC',
+    name: 'CORREIOS MINI ENVIOS CTR AG',
+    numeroServico: '04227',
+    id: '159982',
   },
-  '04332': {
-    name: 'PAC Contrato UO (Liminar ABCOMM)',
-    numeroServico: '04332',
-    id: '',
+  /** CORREIOS MINI ENVIOS CTR TA */
+  P04235: {
+    tipo: 'PAC',
+    name: 'CORREIOS MINI ENVIOS CTR TA',
+    numeroServico: '04235',
+    id: '159983',
   },
-  '04685': {
-    name: 'PAC Pagamento na Entrega',
-    numeroServico: '04685',
-    id: '114976',
+  /** REM PNC ACOES SOCIAIS */
+  P41912: {
+    tipo: 'PAC',
+    name: 'REM PNC ACOES SOCIAIS',
+    numeroServico: '41912',
+    id: '160294',
+  },
+  /** CORREIOS MINI ENVIOS CTR UO */
+  P04391: {
+    tipo: 'PAC',
+    name: 'CORREIOS MINI ENVIOS CTR UO',
+    numeroServico: '04391',
+    id: '160316',
+  },
+  /** PAC CONTRATO AGENCIA TA */
+  P04596: {
+    tipo: 'PAC',
+    name: 'PAC CONTRATO AGENCIA TA',
+    numeroServico: '04596',
+    id: '161277',
+  },
+  /** PAC CONTRATO AG TA */
+  P03085: {
+    tipo: 'PAC',
+    name: 'PAC CONTRATO AG TA',
+    numeroServico: '03085',
+    id: '162011',
+  },
+  /** PAC CONTRATO GDES FORMATOS TA */
+  P03107: {
+    tipo: 'PAC',
+    name: 'PAC CONTRATO GDES FORMATOS TA',
+    numeroServico: '03107',
+    id: '162013',
+  },
+  /** PAC CONTRATO AG */
+  P03298: {
+    tipo: 'PAC',
+    name: 'PAC CONTRATO AG',
+    numeroServico: '03298',
+    id: '162026',
+  },
+  /** PAC CONTRATO GDES FORMATOS */
+  P03328: {
+    tipo: 'PAC',
+    name: 'PAC CONTRATO GDES FORMATOS',
+    numeroServico: '03328',
+    id: '162029',
+  },
+  /** PAC CONTRATO INDUSTRIAL */
+  P03336: {
+    tipo: 'PAC',
+    name: 'PAC CONTRATO INDUSTRIAL',
+    numeroServico: '03336',
+    id: '162030',
   },
 };
 

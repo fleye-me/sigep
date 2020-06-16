@@ -23,6 +23,7 @@ export interface IError {
 
 interface ICartaoPostagem {
   codigoAdministrativo: string;
+  servicos: any;
   //TODO: Mapear resto dos campos
 }
 
