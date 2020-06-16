@@ -1,93 +1,141 @@
 const Sedex = {
-  S41556: {
-    type: 'sedex',
-    name: 'Sedex',
-    numeroServico: '41556',
-    id: '121877',
+  S40215: {
+    tipo: 'SEDEX',
+    name: 'SEDEX 10 A FATURAR',
+    numeroServico: '40215',
+    id: '104707',
   },
-  S04146: {
-    type: 'sedex',
-    name: 'SEDEX Contrato Grandes Formatos (Liminar ABCOMM)',
-    numeroServico: '04146',
-    id: '',
+
+  S03158: {
+    tipo: 'SEDEX',
+    name: 'SEDEX 10 CONTRATO AG',
+    numeroServico: '03158',
+    id: '162016',
   },
-  S04154: {
-    type: 'sedex',
-    name: 'SEDEX Contrato Agência (Liminar ABCOMM)',
-    numeroServico: '04154',
-    id: '160126',
+
+  S40290: {
+    tipo: 'SEDEX',
+    name: 'SEDEX HOJE A FATURAR',
+    numeroServico: '40290',
+    id: '108934',
   },
-  S04243: {
-    type: 'sedex',
-    name: 'SEDEX Reverso (Liminar ABCOMM)',
-    numeroServico: '04243',
-    id: '',
+
+  S03204: {
+    tipo: 'SEDEX',
+    name: 'SEDEX HOJE CONTRATO AG',
+    numeroServico: '03204',
+    id: '162020',
   },
-  S04278: {
-    type: 'sedex',
-    name: 'SEDEX Contrato UO (Liminar ABCOMM)',
-    numeroServico: '04278',
-    id: '',
+
+  S40169: {
+    tipo: 'SEDEX',
+    name: 'SEDEX 12 A FATURAR',
+    numeroServico: '40169',
+    id: '115218',
   },
-  S04151: {
-    type: 'sedex',
-    name: 'SEDEX Contrato Agencia Pagamento na Entrega (Liminar ABCOMM)',
-    numeroServico: '04151',
-    id: '',
+
+  S03140: {
+    tipo: 'SEDEX',
+    name: 'SEDEX 12 CONTRATO AG',
+    numeroServico: '03140',
+    id: '162015',
   },
-  S04553: {
-    type: 'sedex',
-    name: 'SEDEX Contrato Agencia TA ',
-    numeroServico: '04553',
-    id: '161274',
+
+  S40550: {
+    tipo: 'SEDEX',
+    name: 'SEDEX ADMINISTRATIVO',
+    numeroServico: '40550',
+    id: '113379',
   },
+  S40622: {
+    tipo: 'SEDEX',
+    name: 'REMESSA EXP TALAO DE CHEQUES-',
+    numeroServico: '40622',
+    id: '114013',
+  },
+
   S04162: {
-    type: 'sedex',
-    name: 'SEDEX Contrato Agência',
+    tipo: 'SEDEX',
+    name: 'SEDEX CONTRATO AGENCIA',
     numeroServico: '04162',
     id: '124849',
   },
-  S04170: {
-    type: 'sedex',
-    name: 'SEDEX Reverso Contrato Agência',
-    numeroServico: '04170',
-    id: '124849',
-  },
+
   S04014: {
-    type: 'sedex',
-    name: 'Sedex a vista',
+    tipo: 'SEDEX',
+    name: 'SEDEX A VISTA',
     numeroServico: '04014',
-    id: '104295',
+    id: '124877',
   },
-  S40045: {
-    type: 'sedex',
-    name: 'Sedex Varejo a Cobrar',
-    numeroServico: '40045',
-    id: '',
-  },
-  S41009: {
-    type: 'sedex',
-    name: 'Sedex Agrupado',
-    numeroServico: '41009',
-    id: '119461',
-  },
-  S40380: {
-    type: 'sedex',
-    name: 'Sedex Reverso',
-    numeroServico: '40380',
-    id: '109806',
-  },
-  S04685: {
-    type: 'sedex',
-    name: 'Sedex Pagamento na Entrega',
-    numeroServico: '04685',
-    id: '114976',
-  },
+
   S04316: {
-    type: 'sedex',
-    name: 'Sedex Contrato - UO',
+    tipo: 'SEDEX',
+    name: 'SEDEX CONTRATO - UO',
     numeroServico: '04316',
     id: '124900',
+  },
+
+  S04022: {
+    tipo: 'SEDEX',
+    name: 'SEDEX ON LINE A VISTA',
+    numeroServico: '04022',
+    id: '125554',
+  },
+
+  S04073: {
+    tipo: 'SEDEX',
+    name: 'SPP A VISTA E A FATURAR',
+    numeroServico: '04073',
+    id: '125959',
+  },
+
+  S04138: {
+    tipo: 'SEDEX',
+    name: 'SEDEX CONTRATO GRAND FORMATOS',
+    numeroServico: '04138',
+    id: '159907',
+  },
+
+  S04553: {
+    tipo: 'SEDEX',
+    name: 'SEDEX CONTRATO AGENCIA TA',
+    numeroServico: '04553',
+    id: '161274',
+  },
+
+  S76686: {
+    tipo: 'SEDEX',
+    name: 'CDL EXPRESSO',
+    numeroServico: '76686',
+    id: '162002',
+  },
+
+  S03050: {
+    tipo: 'SEDEX',
+    name: 'SEDEX CONTRATO AG TA',
+    numeroServico: '03050',
+    id: '162008',
+  },
+
+  S03212: {
+    tipo: 'SEDEX',
+    name: 'SEDEX CONTRATO GDES FORMATOS',
+    numeroServico: '03212',
+    id: '162021',
+  },
+
+  S03220: {
+    tipo: 'SEDEX',
+    name: 'SEDEX CONTRATO AG',
+    numeroServico: '03220',
+    id: '162022',
+  },
+
+  S03280: {
+    tipo: 'SEDEX',
+    name: 'SEDEX CONTRATO INDUSTRIAL',
+    numeroServico: '03280',
+    id: '162025',
   },
 };
 
