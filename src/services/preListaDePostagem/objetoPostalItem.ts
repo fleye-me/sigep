@@ -1,55 +1,55 @@
 export interface IObjetoPostalItem {
-  numero_etiqueta: string;
+  numero_etiqueta: { _cdata: string } | string;
   /**
    * @desc É obrigatório o campo ficar vazio.
    */
-  codigo_objeto_cliente: string | string;
-  codigo_servico_postagem: string;
+  codigo_objeto_cliente: { _cdata: string } | string;
+  codigo_servico_postagem: { _cdata: string } | string;
   /**
    * @desc em centímetros cúbicos
    */
-  cubagem: number;
+  cubagem: { _cdata: number } | number;
   /**
    * @desc Peso em gramas
    */
-  peso: number;
-  rt1: string;
+  peso: { _cdata: number } | number;
+  rt1: { _cdata: string } | string;
   /**
    * @desc É obrigatório o campo ficar vazio.
    */
-  rt2: string | string;
+  rt2: { _cdata: string } | string;
   destinatario: {
-    nome_destinatario: string;
-    telefone_destinatario: string;
-    celular_destinatario: string;
-    email_destinatario: string;
-    logradouro_destinatario: string;
-    complemento_destinatario: string;
-    numero_end_destinatario: number;
-    cpf_cnpj_destinatario?: string;
-    restricao_anac?: string;
+    nome_destinatario: { _cdata: string } | string;
+    telefone_destinatario: { _cdata: string } | string;
+    celular_destinatario: { _cdata: string } | string;
+    email_destinatario: { _cdata: string } | string;
+    logradouro_destinatario: { _cdata: string } | string;
+    complemento_destinatario: { _cdata: string } | string;
+    numero_end_destinatario: { _cdata: number } | number;
+    cpf_cnpj_destinatario?: { _cdata: string } | string;
+    restricao_anac?: { _cdata: string } | string;
   };
   nacional: {
-    bairro_destinatario: string;
-    cidade_destinatario: string;
-    uf_destinatario: string;
-    cep_destinatario: string;
-    codigo_usuario_postal: string;
-    centro_custo_cliente: string;
-    numero_nota_fiscal: string;
-    serie_nota_fiscal: string;
-    valor_nota_fiscal: string;
+    bairro_destinatario: { _cdata: string } | string;
+    cidade_destinatario: { _cdata: string } | string;
+    uf_destinatario: { _cdata: string } | string;
+    cep_destinatario: { _cdata: string } | string;
+    codigo_usuario_postal: { _cdata: string } | string;
+    centro_custo_cliente: { _cdata: string } | string;
+    numero_nota_fiscal: { _cdata: string } | string;
+    serie_nota_fiscal: { _cdata: string } | string;
+    valor_nota_fiscal: { _cdata: string } | string;
     /**
      * @desc É obrigatório o campo ficar vazio.
      */
-    natureza_nota_fiscal: string | string;
-    descricao_objeto: string;
-    valor_a_cobrar: string;
+    natureza_nota_fiscal: { _cdata: string } | string;
+    descricao_objeto: { _cdata: string } | string;
+    valor_a_cobrar: { _cdata: string } | string;
   };
   servico_adicional: {
-    codigo_servico_adicional: Array<string>;
-    valor_declarado: string;
-    endereco_vizinho?: string;
+    codigo_servico_adicional: Array<{ _cdata: string } | string>;
+    valor_declarado: { _cdata: string } | string;
+    endereco_vizinho?: { _cdata: string } | string;
   };
   dimensao_objeto: {
     /**
@@ -57,39 +57,39 @@ export interface IObjetoPostalItem {
      * @desc Para 002 (Pacote / Caixa) – Preencher as tags: altura, largura e comprimento
      * @desc Para 003 (Rolo / Cilindro / Esférico) – Preencher as tags: comprimento e diâmetro
      */
-    tipo_objeto: string;
+    tipo_objeto: { _cdata: string } | string;
 
     /**
      * @desc Para 001 (Envelope) – preencher com “0”
      * @desc Para 002 (Pacote / Caixa) – obrigatório
      * @desc Para 003 (Rolo / Cilindro / Esférico) – preencher com “0”
      */
-    dimensao_altura: string;
-    dimensao_largura: string;
+    dimensao_altura: { _cdata: string } | string;
+    dimensao_largura: { _cdata: string } | string;
     /**
      * @desc Para 001 (Envelope) – preencher com “0”
      * @desc Para 002 (Pacote / Caixa) – obrigatório
      * @desc Para 003 (Rolo / Cilindro / Esférico) – obrigatório
      */
-    dimensao_comprimento: string;
+    dimensao_comprimento: { _cdata: string } | string;
     /**
      * @desc Para 001 (Envelope) – preencher com “0”
      * @desc Para 002 (Pacote / Caixa) – preencher com “0”
      * @desc Para 003 (Rolo / Cilindro / Esférico) – obrigatório
      */
-    dimensao_diametro: string;
+    dimensao_diametro: { _cdata: string } | string;
   };
   /**
    * @desc É obrigatório o campo ficar vazio.
    */
-  data_postagem_sara: string;
-  status_processamento: string;
+  data_postagem_sara: { _cdata: string } | string;
+  status_processamento: { _cdata: string } | string;
   /**
    * @desc É obrigatório o campo ficar vazio.
    */
-  numero_comprovante_postagem: number | string;
+  numero_comprovante_postagem: { _cdata: string } | string;
   /**
    * @desc É obrigatório o campo ficar vazio.
    */
-  valor_cobrado: number | string;
+  valor_cobrado: { _cdata: string } | string;
 }

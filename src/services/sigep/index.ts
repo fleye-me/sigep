@@ -5,6 +5,7 @@ import solicitaEtiquetas from './solicitaEtiquetas';
 import buscaStatusCartaoPostagem from './buscaStatusCartaoPostagem';
 import fechaPlpVariosServicos from './fechaPlpVariosServicos';
 import solicitaXmlPlp from './solicitaXmlPlp';
+import exportXml from './exportXml';
 
 export default {
   buscaCliente,
@@ -14,4 +15,5 @@ export default {
   buscaStatusCartaoPostagem,
   fechaPlpVariosServicos,
   solicitaXmlPlp,
+  exportXml,
 };
