@@ -27,7 +27,8 @@ npm i @sthima/sigep
 ## Funcionamento
 
 - As funções podem ser chamadas com async/await caso queiram.
-- O Correios dispoe de duas URL sendo elas homologação e produção, para usar a lib em modo homologação basta colocar uma env `APPHOM` no projeto.
+- O Correios dispoe de duas URL sendo elas homologação e produção, para usar a lib em modo homologação basta
+  colocar uma env `APPHOM` no projeto.
 
 Exemplo de um arquivo package.json
 
@@ -78,7 +79,7 @@ import { Sigep, TipoDePostagem, IVerificaServico } from '@sthima/sigep';
 // Dados fake que vem na documentação do correios
 const verificaObject: IVerificaServico = {
   codAdministrativo: '17000190',
-  numeroServico: TipoDePostagem.Pac['41068'].numeroServico,
+  numeroServico: TipoDePostagem.Pac.P41068.numeroServico,
   cepOrigem: '05311900',
   cepDestino: '05311900',
   usuario: 'sigep',
@@ -132,17 +133,23 @@ Sigep.buscaStatusCartaoPostagem(buscaCardObject).then((buscaCard) =>
 
 ```javascript
 // Para facilitar a criação do objeto tem disponivel a interface dele
-import { Sigep, IPLP, IFechaPlpVariosServicos } from '@sthima/sigep';
+import {
+  Sigep,
+  IPLP,
+  IObjetoPostalItem,
+  IFechaPlpVariosServicos,
+} from '@sthima/sigep';
 
 /**
  * A interface vai auxiliar na montagem do objeto, mas recomendo ler a
  * documentação do correios para que tenha um entendimento melhor
  * da funcionalidade
  */
-const xml: IPLP = {};
+const plp: IPLP = {};
+const objeto: IObjetoPostalItem = {};
 
 // Dados fake que vem na documentação do correios
-const plp: IFechaPlpVariosServicos = {
+const usuarioEtiquetas: IFechaPlpVariosServicos = {
   cartaoPostagem: '0067599079',
   idPlpCliente: 123456,
   listaEtiquetas: ['SZ82702873BR'],
@@ -150,7 +157,7 @@ const plp: IFechaPlpVariosServicos = {
   senha: 'n5f9t8',
 };
 
-Sigep.fechaPlpVariosServicos(xml, plp).then((fechaPlp) =>
+Sigep.fechaPlpVariosServicos(plp, [objeto], usuarioEtiquetas).then((fechaPlp) =>
   console.log(fechaPlp)
 );
 ```
