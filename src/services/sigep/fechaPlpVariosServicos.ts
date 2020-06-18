@@ -1,9 +1,6 @@
 import Api from './api';
 import { IError, IFechaPlpVariosServicos } from './types';
-import { js2xml } from 'xml-js';
 import { IPLP } from '../preListaDePostagem/plp';
-import { parseXml } from 'libxmljs';
-import { xml2string } from '../../utils/xmlValidator';
 import { IObjetoPostalItem } from '../preListaDePostagem';
 import exportXml from './exportXml';
 
