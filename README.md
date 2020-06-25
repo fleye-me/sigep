@@ -23,6 +23,8 @@ npm i @sthima/sigep
 - Solicita Xml PLP
 - Etiquetas com Digito
 - Etiquetas sem Espaço
+- Range Etiquetas com Digito
+- Range Etiquetas sem Espaço
 
 ## Funcionamento
 
@@ -180,7 +182,9 @@ Sigep.solicitaXmlPlp(xmlplp).then((solicitaXMLPLP) =>
 );
 ```
 
-### Etiquetas com Digito verificador (função auxiliar)
+## Abaixo tem funções auxiliares que podem ser utilizada como facilitador em algumas etapas
+
+### Etiquetas com digito verificador
 
 ```javascript
 import { etiquetasComDigito } from '@sthima/sigep';
@@ -199,7 +203,7 @@ const responseEtiquetasComDigito = etiquetasComDigito([
 console.log(responseEtiquetasComDigito);
 ```
 
-### Etiquetas sem Espaço (função auxiliar)
+### Etiquetas sem espaço
 
 ```javascript
 import { etiquetasSemEspaco } from '@sthima/sigep';
@@ -208,12 +212,52 @@ import { etiquetasSemEspaco } from '@sthima/sigep';
  * Na montagem do PLP no campo <listaEtiquetas> é necessário colocar o número
  * das etiquetas sem DIGITO e sem ESPAÇO
  */
-const responseEtiquetasComDigito = etiquetasSemEspaco([
+const responseEtiquetasSemEspaco = etiquetasSemEspaco([
   'SZ82702873 BR',
   'SZ82702873 BR',
   'SZ82702873 BR',
   'SZ82702873 BR',
   'SZ82702873 BR',
 ]);
-console.log(responseEtiquetasComDigito);
+console.log(responseEtiquetasSemEspaco);
+```
+
+### Range etiquetas com digito verificador
+
+```javascript
+import { etiquetasRangeComDigito } from './utils';
+
+/**
+ * Na montagem do PLP no campo <numero_etiqueta> é necessário colocar o numero
+ * das etiquetas com o Dígito.
+ *
+ * - Quando a solicitação de etiqueta for com quantidade maior que 1, o
+ * SIGEP retorna um range. A função abaixo retorna as etiquetas entre o
+ * range informado
+ */
+const etiqueComDigito = etiquetasRangeComDigito([
+  'SZ82702873 BR',
+  'SZ82702883 BR',
+]);
+console.log(etiqueComDigito);
+```
+
+### Range etiquetas sem espaço
+
+```javascript
+import { etiquetasRangeSemEspaco } from './utils';
+
+/**
+ * Na montagem do PLP no campo <listaEtiquetas> é necessário colocar o número
+ * das etiquetas sem DIGITO e sem ESPAÇO.
+ *
+ * - Quando a solicitação de etiqueta for com quantidade maior que 1, o
+ * SIGEP retorna um range. A função abaixo retorna as etiquetas entre o
+ * range informado
+ */
+const etiqueSemDigito = etiquetasRangeSemEspaco([
+  'SZ82702873 BR',
+  'SZ82702883 BR',
+]);
+console.log(etiqueSemDigito);
 ```
