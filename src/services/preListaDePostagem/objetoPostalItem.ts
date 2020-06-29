@@ -8,16 +8,16 @@ export interface IObjetoPostalItem {
   /**
    * @desc em centímetros cúbicos
    */
-  cubagem: { _cdata: number } | number;
+  cubagem: number;
   /**
    * @desc Peso em gramas
    */
-  peso: { _cdata: number } | number;
-  rt1: { _cdata: string } | string;
+  peso: number;
+  rt1: string;
   /**
    * @desc É obrigatório o campo ficar vazio.
    */
-  rt2: { _cdata: string } | string;
+  rt2: string;
   destinatario: {
     nome_destinatario: { _cdata: string } | string;
     telefone_destinatario: { _cdata: string } | string;
@@ -25,7 +25,7 @@ export interface IObjetoPostalItem {
     email_destinatario: { _cdata: string } | string;
     logradouro_destinatario: { _cdata: string } | string;
     complemento_destinatario: { _cdata: string } | string;
-    numero_end_destinatario: { _cdata: number } | number;
+    numero_end_destinatario: number;
     cpf_cnpj_destinatario?: { _cdata: string } | string;
     restricao_anac?: { _cdata: string } | string;
   };
@@ -47,7 +47,8 @@ export interface IObjetoPostalItem {
     valor_a_cobrar: { _cdata: string } | string;
   };
   servico_adicional: {
-    codigo_servico_adicional: Array<{ _cdata: string } | string>;
+    //TODO: Criar interface a parte pois não é passado em um array e sim na repetição de tag
+    codigo_servico_adicional: { _cdata: string } | string;
     valor_declarado: { _cdata: string } | string;
     endereco_vizinho?: { _cdata: string } | string;
   };
@@ -77,7 +78,7 @@ export interface IObjetoPostalItem {
      * @desc Para 002 (Pacote / Caixa) – preencher com “0”
      * @desc Para 003 (Rolo / Cilindro / Esférico) – obrigatório
      */
-    dimensao_diametro: { _cdata: string } | string;
+    dimensao_diametro: { _cdata: string };
   };
   /**
    * @desc É obrigatório o campo ficar vazio.

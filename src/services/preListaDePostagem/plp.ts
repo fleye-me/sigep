@@ -18,7 +18,7 @@ export interface IPLP {
   };
   remetente: {
     numero_contrato: { _cdata: string } | string;
-    numero_diretoria: { _cdata: number } | number;
+    numero_diretoria: { _cdata: number } | string;
     codigo_administrativo: { _cdata: string } | string;
     nome_remetente: { _cdata: string } | string;
     logradouro_remetente: { _cdata: string } | string;
@@ -28,12 +28,12 @@ export interface IPLP {
     cep_remetente: { _cdata: string } | string;
     cidade_remetente: { _cdata: string } | string;
     uf_remetente: { _cdata: string } | string;
-    telefone_remetente: { _cdata: number } | number;
+    telefone_remetente: { _cdata: number } | string;
     fax_remetente: { _cdata: string } | string;
     email_remetente: { _cdata: string } | string;
     celular_remetente: { _cdata: string } | string;
     // cpf_cnpj_remetente?: { _cdata: string } | string;
     // ciencia_conteudo_proibido?: { _cdata: string } | string;
   };
-  forma_pagamento: { _cdata: Forma_pagamento } | Forma_pagamento;
+  forma_pagamento: { _cdata: Forma_pagamento } | string;
 }
