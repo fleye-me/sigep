@@ -11,7 +11,7 @@ export default async function fechaPlpVariosServicos(
 ) {
   const client = await Api.clientSoap();
 
-  const JS2XML = exportXml(plp, objeto_postal);
+  const JS2XML = await exportXml(plp, objeto_postal);
 
   return new Promise((resolve, reject: any) => {
     client.fechaPlpVariosServicos(
