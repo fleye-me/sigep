@@ -456,7 +456,7 @@ export const xml2string: string = `<xs:schema xmlns:xs="http://www.w3.org/2001/X
 Para: <tipo_objeto> = 001, preencher com “0” <tipo_objeto> = 002, obrigatório <tipo_objeto> = 003, preencher com “0”
 -->
         <xs:pattern value="[0-9]{0,5}"/>
-        <xs:minInclusive value="2"/>
+        <xs:minInclusive value="0"/>
         <xs:maxInclusive value="105"/>
       </xs:restriction>
     </xs:simpleType>
@@ -465,7 +465,7 @@ Para: <tipo_objeto> = 001, preencher com “0” <tipo_objeto> = 002, obrigatór
     <xs:simpleType>
       <xs:restriction base="xs:integer">
         <xs:pattern value="[0-9]{0,5}"/>
-        <xs:minInclusive value="11"/>
+        <xs:minInclusive value="0"/>
         <xs:maxInclusive value="105"/>
       </xs:restriction>
     </xs:simpleType>
@@ -474,7 +474,7 @@ Para: <tipo_objeto> = 001, preencher com “0” <tipo_objeto> = 002, obrigatór
     <xs:simpleType>
       <xs:restriction base="xs:integer">
         <xs:pattern value="[0-9]{0,5}"/>
-        <xs:minInclusive value="16"/>
+        <xs:minInclusive value="0"/>
         <xs:maxInclusive value="105"/>
       </xs:restriction>
     </xs:simpleType>
@@ -483,7 +483,7 @@ Para: <tipo_objeto> = 001, preencher com “0” <tipo_objeto> = 002, obrigatór
     <xs:simpleType>
       <xs:restriction base="xs:integer">
         <xs:pattern value="[0-9]{0,5}"/>
-        <xs:minInclusive value="5"/>
+        <xs:minInclusive value="0"/>
         <xs:maxInclusive value="105"/>
       </xs:restriction>
     </xs:simpleType>
