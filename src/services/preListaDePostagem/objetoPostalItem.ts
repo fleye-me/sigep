@@ -18,6 +18,7 @@ export interface IObjetoPostalItem {
    * @desc É obrigatório o campo ficar vazio.
    */
   rt2: string;
+  restricao_anac?: { _cdata: string } | string;
   destinatario: {
     nome_destinatario: { _cdata: string } | string;
     telefone_destinatario: { _cdata: string } | string;
@@ -27,7 +28,6 @@ export interface IObjetoPostalItem {
     complemento_destinatario: { _cdata: string } | string;
     numero_end_destinatario: number;
     cpf_cnpj_destinatario?: { _cdata: string } | string;
-    restricao_anac?: { _cdata: string } | string;
   };
   nacional: {
     bairro_destinatario: { _cdata: string } | string;
@@ -78,7 +78,7 @@ export interface IObjetoPostalItem {
      * @desc Para 002 (Pacote / Caixa) – preencher com “0”
      * @desc Para 003 (Rolo / Cilindro / Esférico) – obrigatório
      */
-    dimensao_diametro: { _cdata: string };
+    dimensao_diametro: { _cdata: string } | string;
   };
   /**
    * @desc É obrigatório o campo ficar vazio.
