@@ -31,8 +31,8 @@ export interface IPLP {
     fax_remetente: { _cdata: string } | string;
     email_remetente: { _cdata: string } | string;
     celular_remetente: { _cdata: string } | string;
-    // cpf_cnpj_remetente?: { _cdata: string } | string;
-    // ciencia_conteudo_proibido?: { _cdata: string } | string;
+    cpf_cnpj_remetente?: { _cdata: string } | string;
+    ciencia_conteudo_proibido?: { _cdata: string } | string;
   };
   forma_pagamento: Forma_pagamento | string;
 }
