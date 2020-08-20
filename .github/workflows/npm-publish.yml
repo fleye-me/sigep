@@ -5,17 +5,17 @@ name: Node.js Package
 
 on:
   release:
-    types: [created]
-
+    types: [published]
 jobs:
-  publish-npm:    
+  publish-npm:
     runs-on: ubuntu-latest
+    name: 'Publish new release'
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2-beta
         with:
-          node-version: 12
-          registry-url: https://registry.npmjs.org/      
+          node-version: '12'
+          registry-url: https://registry.npmjs.org/
       - run: npm install
       - run: npm publish --access public
         env:
