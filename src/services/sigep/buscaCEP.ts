@@ -7,8 +7,7 @@ export default async function buscaCEP(cep: string): Promise<ICep> {
   return new Promise((resolve, reject: any) => {
     client.consultaCEP({ cep }, (error: IError, result: { return: ICep }) => {
       if (error) {
-        const _error = error.root.Envelope.Body.Fault.faultstring;
-        reject(_error) ? error.root : error;
+        reject(error);
       } else {
         resolve(result.return);
       }
