@@ -9,8 +9,7 @@ export default async function buscaCliente(userData: IUser): Promise<ICliente> {
       userData,
       (error: IError, result: { return: ICliente }) => {
         if (error) {
-          const _error = error.root.Envelope.Body.Fault.faultstring;
-          reject(_error) ? error.root : error;
+          reject(error);
         } else {
           resolve(result.return);
         }

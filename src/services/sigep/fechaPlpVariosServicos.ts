@@ -18,8 +18,7 @@ export default async function fechaPlpVariosServicos(
       { xml: JS2XML, ...requestData },
       (error: IError, result: { return: string }) => {
         if (error) {
-          const _error = error.root.Envelope.Body.Fault.faultstring;
-          reject(_error) ? error.root : error;
+          reject(error);
         } else {
           resolve(result.return);
         }

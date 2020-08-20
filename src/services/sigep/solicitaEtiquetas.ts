@@ -11,8 +11,7 @@ export default async function solicitaEtiquetas(
       requestData,
       (error: IError, result: { return: string }) => {
         if (error) {
-          const _error = error.root.Envelope.Body.Fault.faultstring;
-          reject(_error) ? error.root : error;
+          reject(error);
         } else {
           const response = result.return.split(',');
           resolve(response);
