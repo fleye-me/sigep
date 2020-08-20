@@ -1,6 +1,6 @@
 {
   "name": "@sthima/sigep",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Lib de integração com o Sigep - Gerenciador de Postagens dos Correios",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
