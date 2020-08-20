@@ -11,8 +11,7 @@ export default async function verificaDisponibilidadeServico(
       requestData,
       (error: IError, result: any) => {
         if (error) {
-          const _error = error.root.Envelope.Body.Fault.faultstring;
-          reject(_error) ? error.root : error;
+          reject(error);
         } else {
           resolve(result.return);
         }

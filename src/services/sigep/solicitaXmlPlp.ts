@@ -9,7 +9,6 @@ export default async function solicitaXmlPlp(
   return new Promise((resolve, reject: any) => {
     client.solicitaXmlPlp(requestData, (error: IError, result: any) => {
       if (error) {
-        const _error = error.root.Envelope.Body.Fault.faultstring;
         reject(error);
       } else {
         resolve(result.return);
