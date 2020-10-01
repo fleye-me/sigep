@@ -26,7 +26,7 @@ export interface IObjetoPostalItem {
     email_destinatario: { _cdata: string } | string;
     logradouro_destinatario: { _cdata: string } | string;
     complemento_destinatario: { _cdata: string } | string;
-    numero_end_destinatario: number;
+    numero_end_destinatario: { _cdata: number } | number;
     cpf_cnpj_destinatario?: { _cdata: string } | string;
   };
   nacional: {
@@ -49,7 +49,7 @@ export interface IObjetoPostalItem {
   servico_adicional: {
     //TODO: Criar interface a parte pois não é passado em um array e sim na repetição de tag
     codigo_servico_adicional: { _cdata: string } | string;
-    valor_declarado: { _cdata: string } | string;
+    valor_declarado?: { _cdata: string } | string;
     endereco_vizinho?: { _cdata: string } | string;
   };
   dimensao_objeto: {
@@ -83,14 +83,14 @@ export interface IObjetoPostalItem {
   /**
    * @desc É obrigatório o campo ficar vazio.
    */
-  data_postagem_sara: { _cdata: string } | string;
-  status_processamento: { _cdata: string } | string;
+  data_postagem_sara?: { _cdata: string } | string;
+  status_processamento?: { _cdata: string } | string;
   /**
    * @desc É obrigatório o campo ficar vazio.
    */
-  numero_comprovante_postagem: { _cdata: string } | string;
+  numero_comprovante_postagem?: { _cdata: string } | string;
   /**
    * @desc É obrigatório o campo ficar vazio.
    */
-  valor_cobrado: { _cdata: string } | string;
+  valor_cobrado?: { _cdata: string } | string;
 }
