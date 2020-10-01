@@ -26,7 +26,7 @@ export interface IObjetoPostalItem {
     email_destinatario: { _cdata: string } | string;
     logradouro_destinatario: { _cdata: string } | string;
     complemento_destinatario: { _cdata: string } | string;
-    numero_end_destinatario: { _cdata: number } | number;
+    numero_end_destinatario: { _cdata: string } | number;
     cpf_cnpj_destinatario?: { _cdata: string } | string;
   };
   nacional: {

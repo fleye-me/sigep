@@ -17,7 +17,7 @@ export interface IPLP {
   };
   remetente: {
     numero_contrato: { _cdata: string } | string;
-    numero_diretoria?: { _cdata: number } | string;
+    numero_diretoria?: { _cdata: string } | string;
     codigo_administrativo: { _cdata: string } | string;
     nome_remetente: { _cdata: string } | string;
     logradouro_remetente: { _cdata: string } | string;
