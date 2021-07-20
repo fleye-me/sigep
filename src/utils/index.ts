@@ -41,11 +41,11 @@ const etiquetasRange = (etiquetas: Array<string>, isDigit: boolean) => {
   const etiquetasList = [];
   if (isDigit) {
     for (let etiqueta = inicio; etiqueta <= fim; etiqueta++) {
-      etiquetasList.push(digitoVerificador(`${prefix}${etiqueta} ${sufix}`));
+      etiquetasList.push(digitoVerificador(`${prefix}${etiqueta.toString().padStart(8, '0')} ${sufix}`));
     }
   } else {
     for (let etiqueta = inicio; etiqueta <= fim; etiqueta++) {
-      etiquetasList.push(`${prefix}${etiqueta}${sufix}`);
+      etiquetasList.push(`${prefix}${etiqueta.toString().padStart(8, '0')}${sufix}`);
     }
   }
   return etiquetasList;
